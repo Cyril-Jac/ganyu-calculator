@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Ganyu Calculator</title>
+<title>Build Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
@@ -51,7 +51,7 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
 <body>
 <main id="login" class="center" hidden>
   <form class="card" id="loginForm" novalidate>
-    <h1>Ganyu Calculator</h1>
+    <h1>Build Guide</h1>
     <p class="sub">Sign in with the email and password you were given.</p>
     <label for="email">Email</label>
     <input id="email" type="email" autocomplete="username" required>
@@ -66,10 +66,10 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
 
 <div id="app" class="app" hidden>
   <div class="bar">
-    <span class="who"><b>Ganyu Calculator</b> · <span id="who"></span></span>
+    <span class="who"><b>Build Guide</b> · <span id="who"></span></span>
     <span class="acts"><button class="ghost" id="pwBtn" type="button">Change password</button><button class="ghost" id="outBtn" type="button">Sign out</button></span>
   </div>
-  <iframe id="frame" title="Ganyu Frostflake Calculator"></iframe>
+  <iframe id="frame" title="Build Guide"></iframe>
 </div>
 
 <dialog id="pwDlg">
@@ -103,7 +103,7 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
     $('who').textContent = 'signed in as ' + name;
     const { data, error } = await sb.from('app_files').select('content').eq('name','calculator').maybeSingle();
     if(error || !data){
-      show('login'); say($('loginMsg'), error ? 'The calculator could not load. Check your internet and try again.' : 'You are signed in, but this account cannot open the calculator.');
+      show('login'); say($('loginMsg'), error ? 'The guide could not load. Check your internet and try again.' : 'You are signed in, but this account cannot open the guide.');
       return;
     }
     if(blobUrl) URL.revokeObjectURL(blobUrl);
